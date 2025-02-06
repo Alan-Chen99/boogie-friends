@@ -65,6 +65,7 @@
 (require 'paren)
 (require 'compile)
 (require 'ido)
+(require 'dash)
 
 (defgroup boogie-friends nil
   "IDE extensions for the programming languages of the Boogie family."

@@ -290,7 +290,8 @@ TAGS are ignored."
 
 ;;;; Custom notifications
 
-(lsp-interface (dafny:compilation/progress (:uri :status :message)))
+(eval-and-compile
+  (lsp-interface (dafny:compilation/progress (:uri :status :message))))
 
 (defvar-local lsp-dafny--verification-status nil)
 
@@ -389,8 +390,8 @@ details."
                   #'lsp-dafny--mode-line-update))))
 
 ;;;; Counterexamples
-
-(lsp-interface (dafny:counterexample (:position :variables)))
+(eval-and-compile
+  (lsp-interface (dafny:counterexample (:position :variables))))
 
 (defvar-local lsp-dafny--counterexamples ()
   "Local cache of counterexample windows.")
